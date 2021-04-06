@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./app.css";
+import Navbar from "./components/navbar/Navbar";
+import city from "./image.jpg";
+import PostBox from "./components/postbox/PostBox";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <div className="body">
+        <h3 className="title">Welcome to MaxT.kz</h3>
+        <div className="news-container">
+          <div className="big-box">
+            <img src={city} alt="img1" className="big-image" />
+            <div className="big-post-info">
+              <p className="big-title">There is some thing should be!</p>
+              <p className="big-tag">Asia</p>
+            </div>
+          </div>
+          <div className="right-box">
+            <PostBox />
+            <PostBox />
+            <PostBox />
+            <PostBox />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
